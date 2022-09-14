@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+</head>
+<body>
+
+<h1>个人中心</h1>
+
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text"  value="{{ user_data.user_name }}"/></td>
+        </tr>
+         <tr>
+            <td>收件人：</td>
+            <td><input type="text" value="{{ user_address.nickname }}"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="button" value="修改密码" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>个人邮箱：</td>
+            <td><input type="text" value="{{ user_data.user_email }}"/></td>
+        </tr>
+        <tr>
+            <td>默认地址：</td>
+            <td><input type="text" value="{{ user_address.address_name }}"/></td>
+        </tr>
+    </table>
+{#<div><button type="button" id="">修改信息</button></div>#}
+
+
+<script>
+
+
+
+</script>
+</body>
+</html>

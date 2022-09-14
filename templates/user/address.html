@@ -1,0 +1,38 @@
+{% extends 'user/personal_center.html' %}
+
+
+{% block info %}
+
+    <h1>书籍信息</h1>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <td>序号</td>
+            <td>名称</td>
+            <td>出版社名称</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in ret %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.title }}</td>
+
+                <td>{{ i.press.name }}</td>
+
+                <td>
+                    <a href="/book_add">添加</a>
+                    <a href="/book_del/?id={{ i.id }}">删除</a>
+                    <a href="/book_update/?id={{ i.id }}">修改</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+
+{% endblock %}

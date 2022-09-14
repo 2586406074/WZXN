@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三级界面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar-fixed-top/">
+
+    <title>Fixed Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/examples/navbar-fixed-top/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script type="text/javascript" src="/static/js/jquery.js" ></script>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/commonCss/footer.css" />
+    <link rel="stylesheet" href="/static/css/commonCss/header.css" />
+    <link rel="stylesheet" href="/static/css/detail.css" />
+    <link rel="stylesheet" href="/static/css/commonCss/FixedRight.css" />
+    <script type="text/javascript" src="/static/js/brand.js" ></script>
+    <script type="text/javascript" src="/static/js/detail.js" ></script>
+
+
+</head>
+<body>
+    {#    导航栏#}
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+{#          <a class="navbar-brand" href="#">玩转乡宁</a>#}
+
+            <a href="/base/"><img src="/static/images/logo.png" alt="玩转乡宁" style="width: 150px"></a>
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">特色农贸</a></li>
+            <li><a href="#">数字农家乐</a></li>
+            <li><a href="#">特色旅游</a></li>
+            <li><a href="../navbar/">宣传介绍</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/shopping_cart/">购物车</a></li>
+            <li class="active"><a href="./">消息通知<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/personal_center/">个人中心</a></li>
+                <li><a href="#">评价晒单</a></li>
+                <li><a href="#">我的账户</a></li>
+                <li role="separator" class="divider"></li>
+
+                <li><a href="/logout/">注销</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="productDetail t" style="margin-top: 100px">
+			<div class="detailContent c">
+
+				<div class="productImg">
+					<div class="imgVideo">
+						<div class="changeBig"></div>
+						<img class="picture l" src="{{ img }}" />
+						<div class="bigImgVideo">
+							<img class="bpicture" src="{{ img }}" />
+						</div>
+						<div class="square"></div>
+					</div>
+					<div class="btnBox l">
+						<div class="Arow l">
+							<div class="leftArow cant l"></div>
+						</div>
+						<ul class="picBtn">
+							<li class="noOpacity"><img src="/static/images/detail_picbtn.jpg"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<div class="Arow l">
+							<div class="rightArow cant"></div>
+						</div>
+					</div>
+				</div>
+				<div class="productInfo l">
+					<div class="productTitle l">
+						<div class="titleBox l">
+							<h1></h1>
+							<p class="p1">{{ name }}</p>
+							<p class="p2">{{ des }}</p>
+						</div>
+{#						<img src="/static/images/logo.png" />#}
+					</div>
+					<div class="productPrice l">
+						<p class="one l">价格</p>
+						<p class="two l">￥</p>
+						<p class="three l">{{ price }}</p>
+						<p class="four l">新品</p>
+					</div>
+
+
+
+					<div class="size l">
+						<h4 class="actTitle l">库存</h4>
+						<h4>{{ stock }}</h4>
+{#						<p class="size2 l">自定义规格#}
+{#							<span class="sizeDetail">暂时无货</span><em></em>#}
+{#						</p>#}
+					</div>
+					<div>
+                        <button type="button" name="btn" onclick="senddata({img:'{{ img }}',price : '{{ price }}', des :'{{ des }}', stock : '{{ stock }}', oper: '加入购物车', name:'{{ name }}'})" >
+                            加入购物车
+                        </button>
+                        <button type="button" name="btn" onclick="senddata({img:'{{ img }}',price : '{{ price }}', des :'{{ des }}', stock : '{{ stock }}', oper: '购买', name:'{{ name }}'})">
+                            购买
+                        </button>
+
+                    </div>
+				</div>
+			</div>
+			<div class="productDetailInfo c">
+				<div class="guesYouLike l">
+					<div class="title l"><p>猜你喜欢</p></div>
+					<div class="product l">
+						<!---->
+					</div>
+				</div>
+				<div id="mainModule" class="l">
+					<div class="rightMainNav t l">
+						<ul>
+							<li class="now">基本信息</li>
+							<li><a href="#thePosts0">相关帖子</a></li>
+							<li><a href="#thePosts1">所有评论</a></li>
+							<li><a href="#thePosts2">产品咨询</a></li>
+							<li><a href="#thePosts3">配送信息</a></li>
+						</ul>
+					</div>
+					<div class="leftLine l">
+						<div class="smallLeftLine l">
+							<ul>
+								<li>规格：5斤</li>
+								<li>货号：469120</li>
+							</ul>
+						</div>
+						<div class="smallLeftLineDetail l">
+							<ul>
+								<li>
+									<div class="LeftLineDetailT t">
+										<div class="icon l"></div>
+										<p>产品特色</p>
+									</div>
+									<div class="text t l">
+										<p>香了个香   完美    辣死你</p>
+									</div>
+								</li>
+								<li>
+									<div class="LeftLineDetailT t">
+										<div class="icon l"></div>
+										<p>主要用途</p>
+									</div>
+									<div class="text t l">
+										<p>不知带</p>
+									</div>
+								</li>
+								<li>
+									<div class="LeftLineDetailT t">
+										<div class="icon l"></div>
+										<p>产地</p>
+									</div>
+									<div class="text t l">
+										<p>乡宁</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="thePosts0" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">相关帖子</p>
+								<p style="font-size: 17px;margin-top: 13px;">RELATED POSTS</p>
+								<div class="shotLine l"></div>
+							</div>
+							<div class="titllenoPost l">
+								<div class="noPost l">
+									<div class="write l"></div>
+									<p>此商品暂时还没有相关帖子哦~</p>
+								</div>
+							</div>
+						</div>
+						<div id="thePosts1" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">商品评论</p>
+								<p style="font-size: 17px;margin-top: 13px;">COMMENTS</p>
+								<div class="shotLine l"></div>
+							</div>
+							<div class="titllenoPost l">
+								<div class="noPost l">
+									<div class="write l"></div>
+									<p>此商品暂时还没有评价子哦~</p>
+								</div>
+							</div>
+						</div>
+						<div id="thePosts2" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">产品咨询</p>
+								<p style="font-size: 17px;margin-top: 13px;">Q&amp;A</p>
+								<div class="shotLine l"></div>
+							</div>
+							<div class="titllenoPost l">
+								<div class="noPost l">
+									<div class="write l"></div>
+									<p>有疑问，来发布第一个问题吧~</p>
+								</div>
+							</div>
+						</div>
+						<div id="thePosts3" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">支付及配送</p>
+								<p style="font-size: 17px;margin-top: 13px;">PAYMENT&amp;SHIPPING</p>
+								<div class="shotLine l"></div>
+							</div>
+							<img class="l" src="img/detail/detail_info1.jpg" style="width: 960px;height: 320px;"/>
+						</div>
+						<div id="thePosts" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">价格声明</p>
+								<p style="font-size: 17px;margin-top: 13px;">PRICE STATEMENT</p>
+								<div class="shotLine l"></div>
+							</div>
+							<img class="l postImg" src="img/detail/detail_info2.jpg" style="width: 960px;height: 81px;"/>
+						</div>
+						<div id="thePosts" class="l">
+							<div class="postsTittle">
+								<p style="font-size: 24px;margin-top: 50px;">退换货规定</p>
+								<p style="font-size: 17px;margin-top: 13px;">RETURN PROVISIONS</p>
+								<div class="shotLine l"></div>
+							</div>
+							<img class="l postImg" src="img/detail/detail_info3.jpg" style="width: 960px;height: 260px;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="moveNav" class="t">
+			<div class="moveNavCenter c">
+				<div class="moveNavLeft l">
+					<ul>
+						<li class="List0"><a href="#mainModule">基本信息</a></li>
+						<li class="List0"><a href="#thePosts0">相关帖子</a></li>
+						<li class="List0"><a href="#thePosts1">所有评论</a></li>
+						<li class="List0"><a href="#thePosts2">产品咨询</a></li>
+						<li class="List0"><a href="#thePosts3">配送信息</a></li>
+					</ul>
+				</div>
+				<div class="moveNavRight r">
+					<span>加入购物车</span>
+					<div class="icon cant r"></div>
+				</div>
+			</div>
+		</div>
+		<footer id="Footer">
+			<!--封装-->
+		</footer>
+		<div id="FixedRight">
+			<div class="fixedRightInfo">
+				<ul>
+					<li><a href="#">
+						<em class="fixedRightInfo1">个人信息</em>
+						<em class="FixedRightContent0 FixedRightContent1"></em>
+					</a></li>
+					<li><a href="#">
+						<em class="fixedRightInfo1">购物车</em>
+						<em class="FixedRightContent0 FixedRightContent2"></em>
+					</a></li>
+					<li><a href="#">
+						<em class="fixedRightInfo1">联系客服</em>
+						<em class="FixedRightContent0 FixedRightContent3"></em>
+					</a></li>
+					<li><a href="#FixedRight">
+						<em class="fixedRightInfo1">移动乡宁</em>
+						<em class="FixedRightContent0 FixedRightContent4"></em>
+					</a></li>
+					<li><a class="toTop" href="#FixedRight">
+						<em class="fixedRightInfo1">返回顶部</em>
+						<em class="FixedRightContent0 FixedRightContent5"></em>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			//公共head
+			$('header').load("commonHtml/header.html");
+			//公共footer
+			$('footer').load("commonHtml/footer.html");
+		</script>
+
+
+    <script>
+   senddata=function(data){
+
+       console.log(data)
+       $.ajax({
+                url: "/third/",
+                type:"post",
+                data:data,
+
+                success:function (res) {
+
+                    const json_data = JSON.parse(res);
+                    console.log(json_data)
+                    const flag = json_data.flag;
+
+                    if(flag==="加入购物车"){
+                        alert("加入成功")
+                    }else if (flag ==="购买"){
+                        window.location.href = '/order?img='+data.img+'&name='+data.name+'&price='+data.price+'&des='+data.des+'&stock='+data.stock
+
+                    }
+                    else {
+                        {#alert(res)#}
+                        window.location.href = flag
+                    }
+
+
+                }
+            })
+   }
+</script>
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+</html>
